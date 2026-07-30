@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    image: face-clustering:latest
+    container_name: face-clustering-api
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--app-dir", "src"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./dataset:/app/dataset
+      - ./output:/app/output
+      - ./models:/app/models
+      - ./logs:/app/logs
+    environment:
+      - LOG_LEVEL=INFO
+      - INSIGHTFACE_CTX_ID=-1   # set to 0 to use GPU (requires nvidia runtime below)
+      - DBSCAN_EPS=0.40
+      - DBSCAN_MIN_SAMPLES=2
+    restart: unless-stopped
+    # Uncomment to enable GPU acceleration (requires nvidia-container-toolkit on host):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  dashboard:
+    build: .
+    image: face-clustering:latest
+    container_name: face-clustering-dashboard
+    command: ["streamlit", "run", "src/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dataset:/app/dataset
+      - ./output:/app/output
+      - ./models:/app/models
+      - ./logs:/app/logs
+    environment:
+      - LOG_LEVEL=INFO
+      - INSIGHTFACE_CTX_ID=-1
+    restart: unless-stopped
+    depends_on:
+      - api

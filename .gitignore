@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.Python
+build/
+dist/
+
+# Environment
+.env
+.env.local
+
+# Models / cache (large binary files - re-downloaded automatically)
+models/*.onnx
+models/embedding_cache/
+!models/.gitkeep
+
+# Data
+dataset/*
+!dataset/.gitkeep
+output/*
+!output/.gitkeep
+
+# Logs
+logs/*.log
+!logs/.gitkeep
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
