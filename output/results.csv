@@ -1,0 +1,7 @@
+image_name,image_path,face_index,cluster_id,confidence,embedding_dim,detection_score,bbox,is_noise
+person_01_0.jpg,C:\Users\admin\AppData\Local\Temp\face_cluster_hgm4mq7c\dataset\person_01_0.jpg,0,0,91.82,512,0.7699,"108,41,174,134",False
+person_01_1.jpg,C:\Users\admin\AppData\Local\Temp\face_cluster_hgm4mq7c\dataset\person_01_1.jpg,0,0,91.82,512,0.7682,"112,31,181,122",False
+person_02_0.jpg,C:\Users\admin\AppData\Local\Temp\face_cluster_hgm4mq7c\dataset\person_02_0.jpg,0,-1,0.0,512,0.8758,"119,84,170,152",True
+person_02_1.jpg,C:\Users\admin\AppData\Local\Temp\face_cluster_hgm4mq7c\dataset\person_02_1.jpg,0,-1,0.0,512,0.7478,"118,69,178,156",True
+person_03_0.jpg,C:\Users\admin\AppData\Local\Temp\face_cluster_hgm4mq7c\dataset\person_03_0.jpg,0,1,92.63,512,0.8176,"132,-1,215,112",False
+person_03_1.jpg,C:\Users\admin\AppData\Local\Temp\face_cluster_hgm4mq7c\dataset\person_03_1.jpg,0,1,92.63,512,0.7888,"103,4,180,110",False

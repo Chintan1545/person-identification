@@ -1,0 +1,4 @@
+cluster_id,image_count,mean_confidence,min_confidence
+-1,2,0.0,0.0
+0,2,91.82,91.82
+1,2,92.63,92.63
