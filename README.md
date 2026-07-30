@@ -89,7 +89,7 @@ load_images → detect_faces → quality_filter (blur/duplicate)
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/person-identification.git
+git clone https://github.com/Chintan1545/person-identification.git
 cd person-identification
 
 python -m venv .venv
