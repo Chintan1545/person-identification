@@ -263,6 +263,4 @@ strategies.
 
 ---
 
-## License
 
-MIT — see [LICENSE](LICENSE).
